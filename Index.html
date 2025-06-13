@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NandoX Gamepad Viewer Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="notifySound" src="NOTIFIC.OGG" preload="auto"></audio>
+
+  <div id="status">🎮 Aguardando controle...</div>
+  <div id="gamepadName">Nenhum controle</div>
+
+  <button id="configBtn">⚙️</button>
+  <div id="colorMenu">
+    <label>Cor principal:</label>
+    <input type="color" id="colorPicker" value="#8000ff" /><br>
+    <label>Atraso (ms):</label>
+    <input type="number" id="delayInput" value="0" min="0" max="1000" step="50" /><br>
+    <label>Mostrar FPS:</label>
+    <input type="checkbox" id="toggleFPS" checked /><br>
+    <label>Mostrar Ping (simulado):</label>
+    <input type="checkbox" id="togglePing" checked />
+  </div>
+
+  <div class="analog-wrapper">
+    <div class="analog-bg"></div>
+    <div class="analog-stick" id="leftStick"></div>
+  </div>
+
+  <div class="buttons">
+    <div id="A" class="btn">A</div>
+    <div id="B" class="btn">B</div>
+    <div id="X" class="btn">X</div>
+    <div id="Y" class="btn">Y</div>
+    <div id="DpadUp" class="btn">↑</div>
+    <div id="DpadDown" class="btn">↓</div>
+    <div id="DpadLeft" class="btn">←</div>
+    <div id="DpadRight" class="btn">→</div>
+    <div id="LT" class="btn">LT</div>
+    <div id="RT" class="btn">RT</div>
+    <div id="LB" class="btn">LB</div>
+    <div id="RB" class="btn">RB</div>
+    <div id="Start" class="btn">Start</div>
+    <div id="Select" class="btn">Select</div>
+  </div>
+
+  <div id="popup" class="popup">Controle conectado!</div>
+
+  <div id="stats">
+    <span id="fps">FPS: --</span> |
+    <span id="ping">Ping: -- ms</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
